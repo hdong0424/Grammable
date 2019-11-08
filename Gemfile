@@ -67,3 +67,4 @@ group :development, :tesst do
 end
 
 gem 'simple_form'
+gem 'devise'
