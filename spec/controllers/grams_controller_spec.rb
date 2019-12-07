@@ -153,7 +153,7 @@ RSpec.describe GramsController, type: :controller do
 				}
 			}
 			
-			expect(response). to redirect_to root_path
+			expect(response).to redirect_to root_path
 
 			gram = Gram.last
 			expect(gram.message).to eq("Hello!")
