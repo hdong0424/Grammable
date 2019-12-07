@@ -1,4 +1,5 @@
 class Gram < ApplicationRecord
+	# Gram model
 	validates :message, presence: true
 	validates :picture, presence: true
 	has_many :comments
