@@ -4,6 +4,9 @@ RSpec.describe CommentsController, type: :controller do
 	describe "comments#create action" do
 	  it "should allow users to create comments on grams" do
 	  	gram = FactoryBot.create(:gram)
+	  	user = FactoryBot.create(:user)
+  		sign_in user
+  		
 	  	post :create, params: { gram_id: gram.id, comment: {message: 'awesome gram' } }
 
 	  	expect(response).to redirect_to root_path
